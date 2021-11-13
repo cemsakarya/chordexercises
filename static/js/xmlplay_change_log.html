@@ -1,0 +1,114 @@
+<!DOCTYPE HTML><html><head><meta charset="utf-8"></head>
+<body><pre>2021-06-10
+
+	* Revision: 114
+	- wrong handling optional directory path when loading multiple instruments
+	- (xmlplay_emb) test presence of optional fall back path for sf2 fonts
+
+	* Revision: 113
+	- updated readme
+
+2021-06-09
+
+	* Revision: 112
+	- no default fall back path for sf2 fonts
+	- URL parameter: sf2=PATH
+
+	* Revision: 111
+	- loading dialog broader and with x-scroll
+	- keep instrument loading message on one line (no break)
+	- switch to MIDI-js when both SF2 directories fail
+	- always set radion buttons to actual sound font type
+
+2021-05-20
+
+	* Revision: 110
+	- store parameters in settings object: opt.
+	- initialize settings object from html element with id="parms".
+	- use opt.sf2url1 and opt.sf2url2 for main and fall back SF2 directory
+	- use opt.midijsUrl1 and opt.midijsUrl2 for main and fall back directory of
+	MIDI-js sound fonts.
+	- use opt.instTab for non standard MIDI-js sound font names.
+
+	* Revision: 109
+	- merged changes of xmlplay
+
+2021-05-18
+
+	* Revision: 108
+	- added radio button to switch between SF2 and MIDI-js
+	- removed \n from abc2svg error messages
+	- use global midiUsedArr to keep all midi numbers used in the score
+
+	* Revision: 107
+	- better administration of loaded instruments
+
+2021-05-17
+
+	* Revision: 106
+	- rewrite of font loading
+
+2021-05-15
+
+	* Revision: 105
+	- code improvement of loading MIDIjs fonts
+
+	* Revision: 104
+	- Start iteration of generators at index 0 instead of 1 and skip generator
+	[0] when it is not present (function inst_create)
+	- show only one alert for all browser API checks and switch to MIDIjs if
+	essential features are missing (iOS)
+
+2021-04-12
+
+	* Revision: 103
+	- percmap translation changed (option -t) The %%voicemap line now comes
+	after %%MIDI lines (if any)
+
+2021-04-08
+
+	* Revision: 102
+	- changes because of updating abc2svg: xmlplay.js and xmlplay_emb.js:
+	- use internal midi number from abc2svg in all cases (percussion, tabulature)
+	xmlplay_emb.html:
+	- no more need for %%titlespace and %%maxstaffsep in examples for xmlplay_emb
+	- move %%voicemap after %%MIDI drummap in each voice
+
+2021-04-04
+
+	* Revision: 101
+	- updated abc2svg: internal representation of ties in abc2svg has changed
+
+2021-01-25
+
+	* Revision: 99
+	- The cursor now also tracks tied notes. Previously the cursor remained on
+	the first note of a tied sequence.
+
+2020-10-18
+
+	* Revision: 98
+	- bug: tempo change event was not handled and caused an exception.
+
+2020-05-27
+
+	* Revision: 97
+	- change in example
+
+2019-06-15
+
+	* Revision: 96
+	- removed the erroneous insertion of %%measurenb 0 in function dolayout.
+	- added %%measurenb 0 to the ABC text on the html example.
+
+	* Revision: 95
+	- use option 'mnum' of xml2abc-js for measure numbers at the start of each
+	system.
+
+2019-06-13
+
+	* Revision: 94
+	both xmlplay and mlplay_emb:
+	- accept %%MIDI directions from the (new) block type of the ABC parser
+
+</pre></body></html>
